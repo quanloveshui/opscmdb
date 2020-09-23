@@ -11,6 +11,23 @@ from cmdb.models import Table,Info
 
 
 
+def register(request):
+    error_msg = ''
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        if User.objects.filter(username=username).exists():
+            error_msg='用户已经存在'
+            return render(request, 'cmdb/register.html', {'error_msg': error_msg})
+        else:
+            User.objects.create_user(
+                username=username,
+                password=password,
+            )
+        return redirect('/')
+
+    return render(request, 'cmdb/register.html', {'error_msg': error_msg})
+
 #登录
 def acc_login(request):
 

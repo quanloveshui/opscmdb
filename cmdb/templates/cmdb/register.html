@@ -8,12 +8,12 @@
 </head>
 <body style=" background: url(/static/img/login.jpg) no-repeat center center fixed; background-size: 100%;">
 
-<form class="form-signin" method="post" action="{% url 'cmdb:login' %}">{% csrf_token %}
+<form class="form-signin" method="post" action="{% url 'cmdb:register' %}">{% csrf_token %}
     <div class="modal-dialog" style="margin-top: 10%;">
 
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title text-center" id="myModalLabel">登录</h4>
+                <h4 class="modal-title text-center" id="myModalLabel">注册</h4>
             </div>
 
 
@@ -32,7 +32,7 @@
 
             <div class="modal-footer">
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary form-control">登录</button>
+                    <button type="submit" class="btn btn-primary form-control">注册</button>
                 </div>
 
             </div>

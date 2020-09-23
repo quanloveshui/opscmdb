@@ -11,5 +11,6 @@ urlpatterns = [
     path('table/detail/', views.detail_table, name='detail-url'),
     url(r'login/',views.acc_login ,name='login'),
     url(r'logout/',views.acc_logout,name="logout" ),
+    url(r'register/',views.register,name="register" ),
 
 ]
